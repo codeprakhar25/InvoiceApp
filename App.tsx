@@ -15,6 +15,7 @@ import {
   View,
 } from 'react-native';
 import Home from './src/screens/Home';
+import AddInvoice from './src/screens/AddInvoice';
 
 
 function App(): JSX.Element {
@@ -23,7 +24,7 @@ function App(): JSX.Element {
   return (
     <View >
       <ScrollView>
-          <Home/>
+          <AddInvoice/>
       </ScrollView>
     </View>
   );
