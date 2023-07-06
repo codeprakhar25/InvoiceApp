@@ -4,7 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Cards from '../components/Cards';
 
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View >
         <View style={styles.Header}>
@@ -83,7 +83,7 @@ fontWeight: 700,}}>
  <Cards/> 
 </View>
 <TouchableOpacity style={styles.button} onPress={()=>{
-
+navigation.navigate('addinvoice')
 }}>
       <Text style={styles.buttonText}>+ Create new invoice</Text>
     </TouchableOpacity>

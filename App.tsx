@@ -16,15 +16,29 @@ import {
 } from 'react-native';
 import Home from './src/screens/Home';
 import AddInvoice from './src/screens/AddInvoice';
-
-
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
 function App(): JSX.Element {
-
+  
+  const Stack = createNativeStackNavigator();
 
   return (
     <View >
       <ScrollView>
-          <AddInvoice/>
+      <NavigationContainer>
+      <Stack.Navigator>
+      <Stack.Screen
+                name="home"
+                component={Home}
+                options={{headerShown: false}}
+              />
+               <Stack.Screen
+                name="addinvoice"
+                component={AddInvoice}
+                options={{headerShown: false}}
+              />
+              </Stack.Navigator>
+        </NavigationContainer>
       </ScrollView>
     </View>
   );
